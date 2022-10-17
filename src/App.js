@@ -1,5 +1,6 @@
 import './App.css';
-import boton from './components/boton.js';
+import Boton from './components/Boton';
+import Counter from './components/Counter'
 import freecodecamplogo from './img/freecodecamp-logo.png';
 
 
@@ -21,17 +22,18 @@ function App() {
           src={freecodecamplogo}
           alt='Logo de FreeCodeCamp' />
       </div>
+      <Counter
+
+      />
       <div className='container-principal'>
-        <boton
+        <Boton
           texto='Click'
-          click-button={true} 
-          eventClick={} />
-        <boton />
-        <boton
+          clickButton={true} 
+          eventClick={eventClick} />
+        <Boton
           texto='Reset'
-          reset-button={false} 
-          eventClick={} />
-        <boton />
+          clickButton={false} 
+          eventClick={resetCount}/>
       </div>
     </div>
   );
